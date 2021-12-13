@@ -9,6 +9,45 @@
     </dependencies>
     <scenes>
         <!--Swift Notes-->
+        <scene sceneID="7iF-co-89b">
+            <objects>
+                <tableViewController id="2kX-8t-JWO" customClass="CategoryViewController" customModule="SwiftNotes_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="MxL-76-s4e" customClass="cat">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="0JZ-0A-ENG">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0JZ-0A-ENG" id="zKh-fe-EKG">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2kX-8t-JWO" id="3j6-31-D1E"/>
+                            <outlet property="delegate" destination="2kX-8t-JWO" id="LWl-rV-uaB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Swift Notes" id="4F5-9V-e0k">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tpB-pd-gDV">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="2kX-8t-JWO" id="VUT-CR-Ofk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="5J8-QH-5tx" kind="show" identifier="goToItems" id="cOJ-SH-SLy"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fJd-qc-g4P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968" y="113"/>
+        </scene>
+        <!--Items-->
         <scene sceneID="Oel-nR-U4k">
             <objects>
                 <tableViewController id="5J8-QH-5tx" customClass="TodoListViewController" customModule="SwiftNotes_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,9 +55,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="kCY-9f-nTZ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoItemCell" id="yR2-9i-kE7">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yR2-9i-kE7" id="wKE-TC-J6a">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -31,7 +75,7 @@
                             <outlet property="delegate" destination="5J8-QH-5tx" id="aAZ-ow-PF1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Swift Notes" id="sgx-lY-k1d">
+                    <navigationItem key="navigationItem" title="Items" id="sgx-lY-k1d">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="sQH-8D-RFB">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -39,10 +83,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="kCY-9f-nTZ" id="SNI-yY-z5V"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0x-Ma-XyD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1013.0434782608696" y="112.5"/>
+            <point key="canvasLocation" x="1797" y="113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PdA-gO-zAr">
@@ -62,7 +109,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="5J8-QH-5tx" kind="relationship" relationship="rootViewController" id="Tdb-NK-9tC"/>
+                        <segue destination="2kX-8t-JWO" kind="relationship" relationship="rootViewController" id="wiB-xR-dZA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLt-Ld-nkp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
