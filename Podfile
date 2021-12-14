@@ -8,5 +8,6 @@ target 'SwiftNotes-iOS' do
   # Pods for SwiftNotes-iOS
   pod 'RealmSwift', '~>10'
   pod 'SwipeCellKit'
+  pod 'ChameleonFramework/Swift'
 
 end

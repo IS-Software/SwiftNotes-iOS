@@ -20,6 +20,7 @@
 		689BF83C2767E2190072D19C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689BF83B2767E2190072D19C /* Category.swift */; };
 		68CB1A36276387FE006AD147 /* PropertyListCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CB1A35276387FE006AD147 /* PropertyListCoder.swift */; };
 		68CB1A382763D7B4006AD147 /* ItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CB1A372763D7B4006AD147 /* ItemExtension.swift */; };
+		68CD3F382768F6E00033BA5C /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD3F372768F6E00033BA5C /* SwipeTableViewController.swift */; };
 		7E0C8B567BFCBB94005AAB6A /* Pods_SwiftNotes_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965B990FE3E7552991D4250E /* Pods_SwiftNotes_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		689BF83B2767E2190072D19C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		68CB1A35276387FE006AD147 /* PropertyListCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListCoder.swift; sourceTree = "<group>"; };
 		68CB1A372763D7B4006AD147 /* ItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemExtension.swift; sourceTree = "<group>"; };
+		68CD3F372768F6E00033BA5C /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		83DE173E41D498FAE63A4B82 /* Pods-SwiftNotes-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftNotes-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SwiftNotes-iOS/Pods-SwiftNotes-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		965B990FE3E7552991D4250E /* Pods_SwiftNotes_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftNotes_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,6 +106,7 @@
 			children = (
 				683633B72762592C00C332B8 /* TodoListViewController.swift */,
 				6809788E276623C5006BEBA1 /* CategoryViewController.swift */,
+				68CD3F372768F6E00033BA5C /* SwipeTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				6809788F276623C5006BEBA1 /* CategoryViewController.swift in Sources */,
 				683633B62762592C00C332B8 /* SceneDelegate.swift in Sources */,
 				68CB1A382763D7B4006AD147 /* ItemExtension.swift in Sources */,
+				68CD3F382768F6E00033BA5C /* SwipeTableViewController.swift in Sources */,
 				68CB1A36276387FE006AD147 /* PropertyListCoder.swift in Sources */,
 				689BF83C2767E2190072D19C /* Category.swift in Sources */,
 				683770EA2768B27300FD6E0D /* RealmCRUD.swift in Sources */,

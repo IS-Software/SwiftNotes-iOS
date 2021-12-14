@@ -27,16 +27,16 @@ class RealmCRUD {
                 print("Error saving Item at realm: \(error)")
                 return false
             }
-        } else {
-            return false
         }
+        return false
     }
     
-    static func addCategory(title: String) -> Bool {
+    static func addCategory(title: String, hex color: String) -> Bool {
         do {
             try self.realm.write {
                 let newCategory = Category()
                 newCategory.title = title
+                newCategory.color = color
                 self.realm.add(newCategory)
             }
             return true
