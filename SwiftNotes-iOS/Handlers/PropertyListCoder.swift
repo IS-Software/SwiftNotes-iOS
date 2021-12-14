@@ -4,6 +4,9 @@
 //
 //  Created by idStorm on 10.12.2021.
 //
+
+//The class is designed to work with UserDefaults
+//Retained for ease of backward migration
 import Foundation
 
 class PropertyListCoder {

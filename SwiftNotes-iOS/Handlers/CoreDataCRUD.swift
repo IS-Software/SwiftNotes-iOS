@@ -5,6 +5,9 @@
 //  Created by idStorm on 11.12.2021.
 //
 
+
+//The class is designed to work with CoreData
+//Retained for ease of backward migration
 import Foundation
 import UIKit
 import CoreData
@@ -12,6 +15,14 @@ import CoreData
 class CRUD: NSManagedObject{
     //is a link to the AppDelegate
     static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    static func getLocation() -> String {
+        if let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.path {
+            print(path)
+            return path
+        }
+        return "Can't unwrapped path"
+    }
     
     //create
     static func create<T: NSManagedObject>(_ type: T.Type) -> T {
@@ -64,7 +75,7 @@ class CRUD: NSManagedObject{
     }
     
     //update
-    static func saveChanges() {
+    static func update() {
         do {
             try context.save()
         } catch {
